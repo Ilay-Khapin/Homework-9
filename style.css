@@ -112,14 +112,27 @@ body {
   padding: 9px 9px;
 }
 
-.star-icon {
-  width: 30px;
-  height: 30px;
-  fill: #fff;
+.discount.yellow::after {
+  content: url(img/Star\ 1.svg);
+  position: absolute;
 }
 
 .product-wrap:not(:nth-child(3n + 3)) {
   margin-right: 70px;
+}
+
+.product-wrap {
+  position: relative;
+}
+
+.description-wrap:hover::after {
+  content: "";
+  width: 294px;
+  height: 301px;
+  background: rgba(120, 94, 73, 0.55);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .description-wrap {
