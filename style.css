@@ -11,6 +11,7 @@ body {
 
 .header {
   background: rgba(196, 196, 196, 0.75);
+  height: 70px;
 }
 
 .header-container {
@@ -19,6 +20,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  margin-top: 6px;
+  display: block;
+  width: 90px;
+  height: 55px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .logo:hover {
@@ -61,30 +73,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 64px 0 115px 0;
+  padding: 64px 0 115px;
 }
 
 .img-wrap {
   position: relative;
-}
-
-.img-wrap:hover::after {
-  content: "";
-  width: 294px;
-  height: 301px;
-  background: rgba(120, 94, 73, 0.55);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.product-image {
-  display: block;
   width: 295px;
   height: 301px;
 }
 
-.discount {
+.product-image {
+  display: block;
+  max-width: 100%;
+}
+
+.label {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -99,25 +102,25 @@ body {
   cursor: pointer;
 }
 
-.discount.red {
+.label.discount {
   background: #e97171;
 }
 
-.discount.green {
+.label.new {
   background: #2ec1ac;
 }
 
-.discount.yellow {
+.label.favorite {
   background: #ead836;
   padding: 9px 9px;
 }
 
-.discount.yellow::after {
-  content: url(img/Star\ 1.svg);
+.label.favorite::after {
+  content: url(img/favorite.svg);
   position: absolute;
 }
 
-.product-wrap:not(:nth-child(3n + 3)) {
+.product-wrap:not(:nth-child(3n)) {
   margin-right: 70px;
 }
 
@@ -125,7 +128,7 @@ body {
   position: relative;
 }
 
-.description-wrap:hover::after {
+.product-wrap:hover::after {
   content: "";
   width: 294px;
   height: 301px;
@@ -139,6 +142,8 @@ body {
   background-color: #fff;
   padding: 16px 35px 30px 16px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .product-wrap:nth-child(n + 4) {
@@ -149,12 +154,14 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .product-description {
   font-size: 16px;
   line-height: 1.5;
   color: #898989;
+  margin-bottom: 8px;
 }
 
 .price {
@@ -174,18 +181,18 @@ body {
 .footer {
   height: 70px;
   background: rgba(196, 196, 196, 0.75);
-  padding-top: 20px;
 }
 
 .footer-container {
   margin: 0 auto;
   width: 1025px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu a {
+.menu-link {
   font-size: 18px;
   line-height: 1.2;
   font-weight: 600;
@@ -195,19 +202,18 @@ body {
   margin-right: 25px;
 }
 
-.menu a:hover {
+.menu-link:hover {
   color: rgba(120, 94, 73, 0.55);
 }
 
-.footer-icons a {
+.footer-icons .footer-icons-link {
   text-decoration: none;
 }
 
 .icon {
   width: 35px;
   height: 35px;
-  margin-right: 11px;
-  margin-left: -6px;
+  margin-right: 5px;
 }
 
 .icon:hover {
